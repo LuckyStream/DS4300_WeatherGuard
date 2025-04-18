@@ -55,9 +55,8 @@
 > Prerequisites: AWS account, IAM roles configured, RDS MySQL instance, S3 buckets created
 
 1. **Deploy Lambda Function**
-   - Use `Lambda.py` as the source code.
+   - Use `Lambda.py` as the source code to deploy in AWS Lambda.
    - Connect to the correct S3 bucket trigger.
-   - Ensure `pymysql` is included as a Lambda layer if needed.
    - Allow VPC access if your RDS is private.
 
 2. **Set Up MySQL Table**
@@ -75,3 +74,12 @@
        new_snow FLOAT,
        anomaly VARCHAR(255)
    );
+---
+
+## How to Run the Streamlit App
+
+To launch the interactive dashboard, make sure your Python environment is set up with the required packages, then run:
+
+```bash
+streamlit run app.py
+
